@@ -8,9 +8,6 @@ $('.autoplay').slick({
 
 //==============================================================================
 
-var h3 = document.getElementsByTagName("h3");
-h3[0].innerHTML = "Countdown Timer With JS";
-
 var sec = 1800,
   countDiv = document.getElementById("timer"),
   secpass,

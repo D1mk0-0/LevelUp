@@ -3,7 +3,8 @@
 .order__form {
     display: grid;
     grid-template-columns: 10rem 10rem 10rem 10rem;
-    grid-template-rows: 5rem 5rem 15rem 15rem;;
+    grid-template-rows: 5rem 5rem 15rem 15rem;
+    ;
     grid-template-areas:
         "header header header header"
         "price price price price"
@@ -24,8 +25,9 @@
     padding: 2rem;
     align-items: center;
     grid-area: header;
+
     .order__name {
-        h3 {
+        h4 {
             color: @gray;
             font-size: 2rem;
             font-weight: 700;
@@ -35,11 +37,11 @@
     .order__timer {
         display: flex;
         color: @gray;
-            font-size: 2rem;
-            font-weight: 700;
+        font-size: 2rem;
+        font-weight: 700;
     }
 
-    #timer{
+    #timer {
         padding: 5px;
         color: crimson !important;
     }
@@ -64,22 +66,24 @@
         font-size: 3rem;
         font-weight: 700;
         color: @black;
-        
-            transform: scale(.85);
-            animation: pulse 1s ease-in-out infinite;
-          
-          
-          @keyframes pulse {
+
+        transform: scale(.85);
+        animation: pulse 1s ease-in-out infinite;
+
+
+        @keyframes pulse {
             from {
-              transform: scale(.85);
+                transform: scale(.85);
             }
+
             50% {
-              transform: scale(1);
+                transform: scale(1);
             }
+
             to {
-              transform: scale(.85);
+                transform: scale(.85);
             }
-          }
+        }
     }
 }
 
@@ -109,15 +113,16 @@
 
 .form-right {
     margin-top: 9rem;
+
     .btn {
-    display: inline-block;
-    vertical-align: top;
-    padding: 1em 1.7em;
-    min-width: 180px;
-    border: 1px solid @gray;
-    border-radius: 30px;
-    background-color: @white;
-    cursor: pointer;
+        display: inline-block;
+        vertical-align: top;
+        padding: 1em 1.7em;
+        min-width: 180px;
+        border: 1px solid @gray;
+        border-radius: 30px;
+        background-color: @white;
+        cursor: pointer;
     }
 }
 
@@ -131,4 +136,20 @@
     position: relative;
     top: 0;
     right: 0;
+}
+
+.form__input,
+.form__text {
+    &::placeholder {
+        text-align: right;
+        line-height: 20px;
+        transform: translateY(-.5rem);
+        opacity: 0;
+        color: @black;
+    }
+    &:focus {
+        &::placeholder {
+            opacity: 1;
+        }
+    }
 }

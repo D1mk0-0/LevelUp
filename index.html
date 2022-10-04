@@ -25,7 +25,7 @@
                     LevelUp
                 </div>
                 <div class="header__order">
-                    <a href="#">
+                    <a href="#order">
                         Заказать
                     </a>
                 </div>
@@ -95,7 +95,7 @@
                 </div>
             </div>
             <div class="srtucture__order">
-                <a href="#">
+                <a href="#order">
                     Заказать
                 </a>
             </div>
@@ -172,7 +172,7 @@
                     <img src="img/doctor.png" alt="">
                 </div>
                 <div class="promo__desc">
-                    <h3>LevelUp</h3>
+                    <h4>LevelUp</h4>
                     <ul>
                         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates temporibus doloremque
                             molestiae obcaecati qui. Adipisci, quis. Cumque, ab, exercitationem porro atque laudantium
@@ -193,7 +193,7 @@
                     <li>характеристика</li>
                 </ol>
                 <div class="promo__order">
-                    <a href="#">
+                    <a href="#order">
                         Заказать
                     </a>
                 </div>
@@ -201,10 +201,10 @@
         </div>
     </div>
     <!--Блок 5-->
-    <div class="order__form">
+    <div class="order__form" id="order">
         <div class="order__header">
             <div class="order__name">
-                <h3>LevelUp</h3>
+                <h4>LevelUp</h4>
             </div>
             <div class="order__timer">
                 <div id="timer"></div>
@@ -221,17 +221,16 @@
         <form class="form" action="/" method="post" id="form">
             <div class="form__group">
                 <label class="form__label" for="name">Введите телефон</label>
-                <input class="form__input" pattern="8[0-9]{10}" name="name" type="text">
-                <div class="input__show">88005553535</div>
+                <input class="form__input" pattern="8[0-9]{10}" name="name" type="text" placeholder="88005553535">
             </div>
             <div class="form__group">
                 <label class="form__label" for="text">Напишите сообщение</label>
-                <input class="form__text" name="text"></input>
-                <div class="text__show">Василий</div>
+                <input class="form__text" name="text" placeholder="Василий">
             </div>
             <div class="form-right">
                 <button class="btn" type="submit">Отправить</button>
             </div>
+        
 
         </form>
 
