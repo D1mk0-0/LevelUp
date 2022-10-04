@@ -1,0 +1,94 @@
+// main: ../style.less
+
+.structure {
+    height: 60rem;
+    background: linear-gradient(45deg, #54d7ff, #ff02ff);
+}
+
+.grid {
+    display: grid;
+
+    justify-content: space-around;
+    grid-template-columns: 20rem 20rem 20rem;
+    grid-template-rows: 19rem 19rem 19rem;
+    grid-template-areas:
+        "item1 . item4"
+        "item2 photo item5"
+        "item3 order item6";
+    grid-gap: 1rem;
+    margin: 0;
+}
+
+.structure__photo {
+    display: flex;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    grid-area: photo;
+}
+
+.structure__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: fade(@white, 20%);
+    border-radius: 10%;
+
+    .structure__disc {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 500;
+        color: @white;
+    }
+
+    img {
+        width: 10rem;
+        height: 10rem;
+        border: 1px solid black;
+        border-radius: 100%;
+    }
+}
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+}
+
+.item6 {
+    grid-area: item6;
+}
+
+.srtucture__order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: order;
+    a {
+        font-size: 2rem;
+        font-weight: 700;
+        color: @gray-light;
+        text-decoration: none;
+        margin: 1rem;
+        background-color: fade(@gray, 30%);
+        border: 1px solid black;
+        border-radius: .5rem;
+    }
+}
